@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FitForge Landing & Assessment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .landing-hero {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 3rem;
+      border-radius: 15px;
+      max-width: 650px;
+      margin: 2rem auto;
+    }
+
+    .landing-hero h1 {
+      font-size: 2.5rem;
+      color: #00ffcc;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    .landing-hero p {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      margin-top: 1rem;
+    }
+
+    form {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    form label {
+      text-align: left;
+      font-weight: bold;
+    }
+
+    input, select, button {
+      padding: 0.6rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      border: 1px solid #00ffcc;
+      background: #111;
+      color: #fff;
+    }
+
+    button {
+      background: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #00c9aa;
+    }
+  </style>
+</head>
+<body>
+  <div class="landing-hero">
+    <h1>Get Your Personalized Workout Plan</h1>
+    <p>Answer a few quick questions to generate your custom fitness plan in under 90 seconds.</p>
+
+    <form id="fitnessForm">
+      <label>Name:
+        <input type="text" name="name" required />
+      </label>
+      <label>Age:
+        <input type="number" name="age" required />
+      </label>
+      <label>Gender:
+        <select name="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+      <label>Fitness Level:
+        <select name="level" required>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </label>
+      <label>Workout Goal:
+        <select name="goal" required>
+          <option value="lose fat">Lose Fat</option>
+          <option value="build muscle">Build Muscle</option>
+          <option value="tone">Tone</option>
+          <option value="general">General Fitness</option>
+        </select>
+      </label>
+      <label>Preferred Training Style:
+        <select name="style" required>
+          <option value="weights">Weights</option>
+          <option value="cardio">Cardio</option>
+          <option value="bodyweight">Bodyweight</option>
+          <option value="hiit">HIIT</option>
+        </select>
+      </label>
+      <label>Days per Week Available:
+        <select name="days" required>
+          <option value="2">2 Days</option>
+          <option value="3">3 Days</option>
+          <option value="4">4 Days</option>
+          <option value="5">5 Days</option>
+          <option value="6">6 Days</option>
+          <option value="7">7 Days</option>
+        </select>
+      </label>
+
+      <button type="submit">Generate My Plan</button>
+    </form>
+  </div>
+
+  <script src="synced_workout_script.js"></script>
+</body>
+</html>
